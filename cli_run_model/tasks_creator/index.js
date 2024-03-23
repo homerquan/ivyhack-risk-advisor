@@ -32,7 +32,7 @@ async function generateTasks(input, model = "gpt3.5") {
   let prompt = `
   Assuming you have to decide what to do to help a client analysis past 1 year history data (from input timestamp) to evaluate investment risks. A client ask to evaluate risk
   based on the following input, decide on the tasks to be performed:\n${JSON.stringify(input)}\n\nIf 
-  the input is about an investment decision, out put two actions (need to have both) in the json format (LOOK_REPORT and LOOK_STOCK_PRICE)
+  the input is about an investment decision, output one or two actions (If it's a company with stock symbol it need to have both) in the json format (LOOK_REPORT and LOOK_STOCK_PRICE)
   replace symbol and date range according to input 
   ===
   {
