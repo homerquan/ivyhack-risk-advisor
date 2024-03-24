@@ -1,0 +1,27 @@
+{
+  "summary": "Based on Boeing's annual report and stock market performance as of 2022/01/01, it is recommended to proceed with caution due to various risks in the market.",
+  "score": 2,
+  "risks": [
+    {
+      "name": "Market Competition",
+      "details": "Boeing faces intense competition from Airbus in the commercial aviation sector. Any significant advancements or sales victories by Airbus could negatively impact Boeing's market share and stock price.",
+      "evidence": "According to the annual report, Boeing highlighted the competitive landscape in the aviation industry, specifically mentioning Airbus as a key competitor. Additionally, the stock price history shows fluctuations in response to news and developments from Airbus."
+    },
+    {
+      "name": "Regulatory Risks",
+      "details": "Boeing is still navigating the aftermath of the 737 MAX incidents, with ongoing regulatory scrutiny that could affect its operational freedom and impose additional costs.",
+      "evidence": "The annual report mentioned ongoing regulatory challenges related to the 737 MAX incidents, indicating potential future impacts on Boeing's operations and financials. Stock price history also reflects volatility surrounding regulatory news."
+    },
+    {
+      "name": "Supply Chain Disruptions",
+      "details": "Global supply chain issues, partly due to the pandemic, could delay Boeing's production schedules and deliveries, impacting revenue forecasts.",
+      "evidence": "The annual report discussed supply chain challenges, including those exacerbated by the pandemic. This could lead to production delays and affect revenue projections, as seen in the stock price history during periods of supply chain disruptions."
+    },
+    {
+      "name": "Geopolitical Tensions",
+      "details": "Escalating geopolitical tensions, especially involving key markets or suppliers, could disrupt Boeing's operations or alter the defense spending patterns of governments, affecting both commercial and defense sectors.",
+      "evidence": "Given Boeing's global operations, geopolitical tensions pose a significant risk. The annual report highlighted geopolitical uncertainties as a factor that could impact the company's performance. Stock price history may reflect market reactions to geopolitical events affecting Boeing."
+    }
+  ],
+  "bi": {}
+}

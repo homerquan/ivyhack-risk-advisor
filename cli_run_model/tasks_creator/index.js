@@ -15,7 +15,7 @@ const options = program.opts();
 const run = async()=>{
   const input = JSON.parse(options.input);
   const tasks = await generateTasks(input);
-  console.log(output);
+  console.log(JSON.stringify(tasks));
 }
 
 if (options.input) {

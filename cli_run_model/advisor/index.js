@@ -26,7 +26,7 @@ if (options.file) {
   run();
 }
 
-async function performRiskAnalysis(data, model = "gpt4") {
+async function performRiskAnalysis(data, model = "gpt3.5") {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY, // This is the default and can be omitted
   });
