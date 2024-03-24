@@ -16,6 +16,11 @@ document.getElementById('submit').addEventListener('click', function() {
     var submitBtn = document.getElementById('submit');
     var loadingStatus = document.getElementById('loading-status');
 
+    if (!goal.value.trim() || goal.value.trim().split(/\s+/).length < 10) {
+        alert('Please give a specific goal');
+        return; // Stop execution if condition is met
+    }
+
     // Disable inputs and show loading
     [goal, context, timestamp, time, submitBtn].forEach(elem => elem.disabled = true);
     loadingStatus.style.display = 'block';
