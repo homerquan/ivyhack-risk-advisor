@@ -1,0 +1,34 @@
+{
+  "Low": {
+    "undefined": {
+      "open": null,
+      "close": null,
+      "dividend": null,
+      "Close": null
+    }
+  },
+  "Open": {
+    "undefined": {
+      "open": null,
+      "close": null,
+      "dividend": null,
+      "Close": null,
+      "Dividend": null
+    }
+  },
+  "Stock Splits": {
+    "undefined": {
+      "open": null,
+      "close": null,
+      "dividend": null,
+      "Dividend": null
+    }
+  },
+  "Volume": {
+    "undefined": {
+      "open": null,
+      "close": null,
+      "dividend": null
+    }
+  }
+}
