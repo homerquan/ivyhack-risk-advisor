@@ -1,1 +1,1 @@
-{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"BA","range":{"from":"2023-03-14","to":"2023-09-14"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"BA","range":{"from":"2023-03-14","to":"2023-09-14"}}}]}
+{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"GE","range":{"from":"2022-06-01","to":"2023-06-01"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"GE","range":{"from":"2022-06-01","to":"2023-06-01"}}}]}
