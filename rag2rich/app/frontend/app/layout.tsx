@@ -39,7 +39,7 @@ export default function RootLayout({
         >
             
             <main className="flex flex-col  background-gradient overflow-hidden h-screen">
-            <Header />
+            
               {children}
               
             </main>
