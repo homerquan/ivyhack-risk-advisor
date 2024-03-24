@@ -56,12 +56,12 @@ document.getElementById('submit').addEventListener('click', function() {
                     <ul>${data.risks.map(risk => `<li><strong>${risk.name}:</strong> ${risk.details}</li>`).join('')}</ul>`;
                     document.getElementById('response').classList.add('show');
                     loadingStatus.style.display = 'none';
-                    [goal, context, timestamp, time, submitBtn].forEach(elem => elem.disabled = false);
+                    [goal, context, timestamp, submitBtn].forEach(elem => elem.disabled = false);
                 })
                 .catch((error) => {
                     console.error('Error:', error);
                     loadingStatus.innerHTML = `<p>Error fetching data. Please try again.</p>`;
-                    [goal, context, timestamp, time, submitBtn].forEach(elem => elem.disabled = false);
+                    [goal, context, timestamp, submitBtn].forEach(elem => elem.disabled = false);
                 });
             });
         });

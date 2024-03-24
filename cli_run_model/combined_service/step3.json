@@ -1,0 +1,27 @@
+{
+  "summary": "Based on Boeing's annual report and stock market performance as of 2022/01/01, it is recommended to proceed with caution due to various risks in the market.",
+  "score": 3,
+  "risks": [
+    {
+      "name": "Market Competition",
+      "details": "Boeing faces intense competition from Airbus in the commercial aviation sector. Any significant advancements or sales victories by Airbus could negatively impact Boeing's market share and stock price.",
+      "evidence": "According to the annual report, Boeing acknowledges the competitive pressure from Airbus and other competitors in the industry. Additionally, the stock price history shows that fluctuations in market share and stock price have been influenced by competitive dynamics."
+    },
+    {
+      "name": "Regulatory Risks",
+      "details": "Boeing is still navigating the aftermath of the 737 MAX incidents, with ongoing regulatory scrutiny that could affect its operational freedom and impose additional costs.",
+      "evidence": "The annual report highlights the ongoing regulatory challenges faced by Boeing related to the 737 MAX incidents. This has led to increased regulatory scrutiny and potential costs for compliance and safety measures, impacting the company's operations and financial performance."
+    },
+    {
+      "name": "Supply Chain Disruptions",
+      "details": "Global supply chain issues, partly due to the pandemic, could delay Boeing's production schedules and deliveries, impacting revenue forecasts.",
+      "evidence": "The annual report mentions the potential risks associated with global supply chain disruptions, including those caused by the pandemic. Historical stock price data also reflects instances where production delays and supply chain issues have affected Boeing's revenue projections and overall performance."
+    },
+    {
+      "name": "Geopolitical Tensions",
+      "details": "Escalating geopolitical tensions, especially involving key markets or suppliers, could disrupt Boeing's operations or alter the defense spending patterns of governments, affecting both commercial and defense sectors.",
+      "evidence": "Based on the annual report, Boeing acknowledges the impact of geopolitical tensions on its operations and market dynamics. The stock price history also shows instances where geopolitical events have influenced investor sentiment and affected Boeing's stock performance."
+    }
+  ],
+  "bi": {}
+}
