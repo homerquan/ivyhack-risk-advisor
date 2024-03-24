@@ -53,19 +53,23 @@ ${data}
   "risks": [
     {
       "name": "Market Competition",
-      "details": "Boeing faces intense competition from Airbus in the commercial aviation sector. Any significant advancements or sales victories by Airbus could negatively impact Boeing's market share and stock price."
+      "details": "Boeing faces intense competition from Airbus in the commercial aviation sector. Any significant advancements or sales victories by Airbus could negatively impact Boeing's market share and stock price.",
+      "evidence": "The annual report see 10% decline in market share"
     },
     {
       "name": "Regulatory Risks",
-      "details": "Boeing is still navigating the aftermath of the 737 MAX incidents, with ongoing regulatory scrutiny that could affect its operational freedom and impose additional costs."
+      "details": "Boeing is still navigating the aftermath of the 737 MAX incidents, with ongoing regulatory scrutiny that could affect its operational freedom and impose additional costs.",
+      "evidence": "%explain why this is a risk%"
     },
     {
 "      name": "Supply Chain Disruptions",
-      "details": "Global supply chain issues, partly due to the pandemic, could delay Boeing's production schedules and deliveries, impacting revenue forecasts."
+      "details": "Global supply chain issues, partly due to the pandemic, could delay Boeing's production schedules and deliveries, impacting revenue forecasts.",
+      "evidence": "%explain why this is a risk%"
     },
     {
       "name": "Geopolitical Tensions",
-      "details": "Escalating geopolitical tensions, especially involving key markets or suppliers, could disrupt Boeing's operations or alter the defense spending patterns of governments, affecting both commercial and defense sectors."
+      "details": "Escalating geopolitical tensions, especially involving key markets or suppliers, could disrupt Boeing's operations or alter the defense spending patterns of governments, affecting both commercial and defense sectors.",
+      "evidence": "%explain why this is a risk%"
     }
   ],
   "bi": {}
@@ -103,8 +107,6 @@ Risks list the itemized each potential risk, and in detail, give the evidence (E
 
   try {
     advice = JSON.parse(output);
-    // Example of handling tasks based on the API output
-    console.log(output);
   } catch (e) {
     console.error("Error parsing advice:", e);
   }
