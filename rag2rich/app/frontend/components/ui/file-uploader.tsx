@@ -77,11 +77,12 @@ export default function FileUploader({
   };
 
   return (
-    <div className="self-stretch">
+    <div className="self-stretch ">
       <input
         type="file"
         id={inputId}
         style={{ display: "none" }}
+        className="h-14"
         onChange={onFileChange}
         accept={allowedExtensions?.join(",")}
         disabled={config?.disabled || uploading}
@@ -92,6 +93,7 @@ export default function FileUploader({
           buttonVariants({ variant: "secondary", size: "icon" }),
           "cursor-pointer",
           uploading && "opacity-50",
+          "h-14 w-14"
         )}
       >
         {uploading ? (
