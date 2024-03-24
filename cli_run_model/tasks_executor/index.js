@@ -4,6 +4,9 @@ const { program } = require("commander");
 const moment = require("moment");
 const process = require("process");
 const yahooFinance = require("yahoo-finance");
+const axios = require('axios');
+
+const FMP_API_KEY = "f28c1df74c02fc9d574b79900a2d9147";
 
 program
   .description("CLI tool to execute tasks and generate output")
@@ -26,8 +29,8 @@ async function executeTasks(tasks) {
   // Mock function to execute tasks and return results
   const results = tasks.map(async (task) => {
     switch (task.action) {
-      case "LOOK_ANNUAL_REPORT":
-        return await getCashFlow(
+      case "LOOK_REPORT":
+        return await getAnnualReport(
           task.data.symbol,
           task.data.range.from,
           task.data.range.to
@@ -44,20 +47,6 @@ async function executeTasks(tasks) {
   });
 
   return results;
-}
-
-function mockLookupAnnualReport(data) {
-  // Mock data for an annual report lookup
-  return {
-    type: "ANNUAL_REPORT",
-    data: {
-      symbol: data.symbol,
-      report: {
-        "2023-09-30T00:00:00": {},
-        "2023-12-31T00:00:00": {},
-      },
-    },
-  };
 }
 
 async function getStockPrice(symbol, from, to) {
@@ -84,27 +73,28 @@ async function getStockPrice(symbol, from, to) {
   );
 }
 
-async function getCashFlow(symbol, from, to) {
-  const options = {
-    // Include options such as period (daily, weekly, monthly)
-    period: "q",
-  };
+async function getAnnualReport(symbol, from, to) {
+  const url = `https://financialmodelingprep.com/api/v3/financial-statement-full-as-reported/${symbol}?period=annual&limit=5&apikey=${FMP_API_KEY}`;
 
-  yahooFinance.cashFlow(
-    {
-      symbol: symbol,
-      from: from,
-      to: to,
-      ...options,
-    },
-    (err, quotes) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(quotes);
-      }
-    }
-  );
+  try {
+    console.log(url);
+    const response = await axios.get(url);
+    const reports = response.data;
+    // Filter reports by the report release date
+    const filteredReports = reports.filter(report => {
+      const reportDate = new Date(report.date);
+      const startDate = new Date(from);
+      const endDate = new Date(to);
+
+      return reportDate >= startDate && reportDate <= endDate;
+    });
+    
+    console.log(filteredReports);
+    return filteredReports;
+  } catch (error) {
+    console.error('Error fetching annual reports:', error);
+  }
 }
+
 
 
