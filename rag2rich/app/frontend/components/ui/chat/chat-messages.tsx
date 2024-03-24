@@ -35,7 +35,7 @@ export default function ChatMessages(
   }, [messageLength, lastMessage]);
 
   return (
-<div className="w-full h-[85%] border-r shrink-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90 backdrop-blur-xl p-4 pb-0 relative">
+<div className="w-full h-[80%] border-r shrink-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90 backdrop-blur-xl p-4 pb-0 relative">
   <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/50"></div>
       <div
         className="flex h-[50vh] flex-col gap-5 divide-y overflow-y-auto pb-4"
@@ -58,23 +58,23 @@ export default function ChatMessages(
           showStop={showStop}
         />
       </div>
-      <div className="w-full gap-4 mb[-22rem] flex-wrap h-60 shrink-0 rounded-xl background-gradient2 flex flex-row justify-center items-center">
-        <div className="flex flex-row w-[42rem] flex-wrap gap-4">
-        <div className="w-80 h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
-          <h2 className="font-bold !text-black 0">What is my risk</h2>
+      <div className="w-full gap-4  flex-wrap h-[10rem]  mb-[10rem] shrink-0 rounded-xl flex flex-row justify-center items-center">
+        <div className="flex flex-row w-full mb-[2rem] flex-wrap gap-4">
+        <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
+          <h2 className="font-bold !text-black 0 -mb-1">What is my risk</h2>
           <p className="text-gray-700">if I invest in boeing in 2024?</p>
         </div>
-        <div className="w-80 h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
-          <h2 className="font-bold !text-black 0">Give me a visualization</h2>
+        <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
+          <h2 className="font-bold !text-black 0 -mb-1">Give me a visualization</h2>
           <p className="text-gray-700">about for my portfolio.</p>
         </div>
 
-        <div className="w-80 h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
-          <h2 className="font-bold !text-black 0">Present risk for my vc investments</h2>
+        <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
+          <h2 className="font-bold !text-black 0 -mb-1">Present risk for my vc investments</h2>
           <p className="text-gray-700">critique it as well!</p>
         </div>
-        <div className="w-80 h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
-          <h2 className="font-bold !text-black 0">Provide another insight</h2>
+        <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
+          <h2 className="font-bold !text-black 0 -mb-1">Provide another insight</h2>
           <p className="text-gray-700">on my provided files.</p>
         </div>
         </div>

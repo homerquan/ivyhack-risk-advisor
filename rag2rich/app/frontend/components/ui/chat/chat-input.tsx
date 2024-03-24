@@ -57,7 +57,7 @@ export default function ChatInput(
   return (
     <form
       onSubmit={onSubmit}
-      className=" bg-white h-full shadow-xl space-y-4 border-r"
+      className=" bg-white h-[20%] relative z-10 shadow-xl space-y-4 border-r"
     >
       {imageUrl && (
         <UploadImagePreview url={imageUrl} onRemove={onRemovePreviewImage} />

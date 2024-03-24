@@ -5,23 +5,23 @@ import ChatSection from "../components/chat-section";
 export default function Home() {
   return (
     <div className="flex flex-row h-[100vh]">
-      <div className="pt-12 pr-4 pl-4  w-[15%] border-r shrink-0 bg-gradient-to-b from-background/90 via-background/50 to-background/10 backdrop-blur-xl">
+      <div className="pt-12 pr-4 pl-4  w-[18%] border-r shrink-0 bg-gradient-to-b from-background/90 via-background/50 to-background/10 backdrop-blur-xl">
 
         <h1 className="text-4xl font-bold">Chats</h1>
         <div className="flex flex-col mt-8 gap-2">
-        <div className="w-full h-14 bg-black rounded-3xl">
-            <p className="text-white p-4 pb-6 text-md truncate">Risk management</p>
+        <div className="w-full flex items-center h-12 bg-black rounded-3xl">
+            <p className="text-white p-4 flex items-center text-md truncate">Risk management</p>
           </div>
-          <div className="w-full h-14 bg-white rounded-3xl">
-            <p className="text-black p-4 pb-6 text-md truncate">Past assessment</p>
+          <div className="w-full h-12 bg-white rounded-3xl">
+            <p className="text-black p-4 flex items-center text-md truncate">Past assessment</p>
           </div>
-          <div className="w-full h-14 bg-white rounded-3xl">
-            <p className="text-black p-4 pb-6 text-md truncate">Portfolio pred</p>
+          <div className="w-full h-12 bg-white rounded-3xl">
+            <p className="text-black p-4 flex items-center text-md truncate">Portfolio pred</p>
           </div>
         </div>
       </div>
       <ChatSection />
-      <div className="pt-12 pr-8 pl-8  w-[20%] flex flex-col border-r shrink-0 bg-gradient-to-b from-background/90 via-background/50 to-background/10 backdrop-blur-xl">
+      <div className="pt-12 pr-8 pl-8  w-[25%] flex flex-col border-r shrink-0 bg-gradient-to-b from-background/90 via-background/50 to-background/10 backdrop-blur-xl">
         <div className="flex flex-row gap-2 w-full justify-between">
           <p className="underline-offset-4 underline text-blue-500">Media</p>
           <p className="underline-offset-4 underline">Links</p>
