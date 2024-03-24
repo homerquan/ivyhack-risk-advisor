@@ -1,5 +1,5 @@
 {
-    "status": "ERROR",
-    "request_id": "f739da031a860851f85f3afab96668ab",
-    "error": "You've exceeded the maximum requests per minute, please wait or upgrade your subscription to continue. https://polygon.io/pricing"
+  "status": "NOT_FOUND",
+  "request_id": "adb90f23c47a960b10f896c52a3c1ba0",
+  "message": "Data not found."
 }

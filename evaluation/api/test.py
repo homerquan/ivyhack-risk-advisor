@@ -6,7 +6,7 @@ from nltk.tokenize import word_tokenize
 nltk.download('punkt')
 
 # Set up OpenAI API credentials
-openai.api_key = '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'
+openai.api_key = 
 
 # Generate text using OpenAI GPT-3 model
 response = openai.chat.completions.create(

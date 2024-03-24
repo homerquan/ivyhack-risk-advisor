@@ -1,5 +1,36 @@
 import json
+import os
+import api_calls
+import openai
+# Import the necessary modules
 
+# Define the file paths
+current_directory = os.path.dirname(os.path.abspath(__file__))
+test_directory = os.path.join(current_directory, 'test')
+api_test1_file = os.path.join(test_directory, 'api-test1.py')
+api_test2_file = os.path.join(test_directory, 'api-test2.py')
+api_test3_file = os.path.join(test_directory, 'api-test3.py')
+api_test4_file = os.path.join(test_directory, 'api-test4.py')
+
+# Load the content of the files
+with open(api_test1_file) as file:
+    api_test1_content = file.read()
+print(api_test1_content)  # check if content is correctly loaded 
+
+print(api_test1_content)
+with open(api_test2_file) as file:
+    api_test2_content = file.read()
+print(api_test2_content)  # check if content is correctly loaded
+
+with open(api_test3_file) as file:
+    api_test3_content = file.read()
+print(api_test3_content)  # check if content is correctly loaded
+
+with open(api_test4_file) as file:
+    api_test4_content = file.read()
+print(api_test4_content)  # check if content is correctly loaded
+
+# Rest of the code...
 #make api call based on the extracted_info.txt file content:
 
 # Load the content of the file
