@@ -19,34 +19,43 @@ program.parse(process.argv);
 
 const options = program.opts();
 
+const runAsync = async(tasks) => {
+  const results = await executeTasks(tasks);
+  console.log(JSON.stringify(results));
+}
+
 if (options.input) {
   const tasks = JSON.parse(options.input);
-  const results = executeTasks(tasks);
-  console.log(JSON.stringify(results, null, 2));
+  runAsync(tasks);
 }
 
 async function executeTasks(tasks) {
   // Mock function to execute tasks and return results
-  const results = tasks.map(async (task) => {
+  let evidencs = {};
+  let runningTasks = [];
+  tasks.map(async (task) => {
     switch (task.action) {
+      // add more action types later
       case "LOOK_REPORT":
-        return await getAnnualReport(
+        runningTasks.push(getAnnualReport(
           task.data.symbol,
           task.data.range.from,
           task.data.range.to
-        );
+        ));
       case "LOOK_STOCK_PRICE":
-        return await getStockPrice(
+        runningTasks.push(getStockPrice(
           task.data.symbol,
           task.data.range.from,
           task.data.range.to
-        );
+        ));   
       default:
-        return {};
+        // do nothing; 
     }
   });
 
-  return results;
+  evidencs = await Promise.all(runningTasks);
+
+  return {"report":evidencs[0],"stock":evidencs[1]};
 }
 
 async function getStockPrice(symbol, from, to) {
@@ -54,30 +63,29 @@ async function getStockPrice(symbol, from, to) {
     // Include options such as period (daily, weekly, monthly)
     period: "m",
   };
-
-  yahooFinance.historical(
-    {
-
-      symbol: symbol,
-      from: from,
-      to: to,
-      ...options,
-    },
-    (err, quotes) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(quotes);
+  return new Promise((resolve, reject) => {
+    yahooFinance.historical(
+      {
+        symbol,
+        from,
+        to,
+        ...options,
+      },
+      (err, quotes) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(quotes);
+        }
       }
-    }
-  );
+    );
+  });
 }
 
 async function getAnnualReport(symbol, from, to) {
   const url = `https://financialmodelingprep.com/api/v3/financial-statement-full-as-reported/${symbol}?period=annual&limit=5&apikey=${FMP_API_KEY}`;
 
   try {
-    console.log(url);
     const response = await axios.get(url);
     const reports = response.data;
     // Filter reports by the report release date
@@ -85,11 +93,8 @@ async function getAnnualReport(symbol, from, to) {
       const reportDate = new Date(report.date);
       const startDate = new Date(from);
       const endDate = new Date(to);
-
       return reportDate >= startDate && reportDate <= endDate;
     });
-    
-    console.log(filteredReports);
     return filteredReports;
   } catch (error) {
     console.error('Error fetching annual reports:', error);
