@@ -7,7 +7,9 @@ const OpenAI = require("openai");
 
 program
   .description('CLI tool to perform risk analysis on investment opportunities')
-  .requiredOption('-f, --file <string>', 'Input JSON file name');
+  .requiredOption('-f, --file <string>', 'Input JSON file name')
+  .requiredOption('-g, --goal <string>', 'goal text')
+  .requiredOption('-c, --context <string>', 'context text');
 
 program.parse(process.argv);
 
@@ -31,8 +33,8 @@ async function performRiskAnalysis(data, model = "gpt4") {
 
   let advaice = {};
 
-  const goal = "I want to invest $5000 on AAPL for 6 months right now";
-  const context = "I have 100K cash in saving account"
+  const goal = options.goal;
+  const context = options.context;
 
   let prompt = `
 assume an investor want to do this: ${goal} (right now means 2022/1/1), and claim with this context: ${context} 
