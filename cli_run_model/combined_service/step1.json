@@ -1,1 +1,1 @@
-{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"GE","range":{"from":"2022-06-01","to":"2023-06-01"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"GE","range":{"from":"2022-06-01","to":"2023-06-01"}}}]}
+{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"TSLA","range":{"from":"2021-10-01","to":"2022-10-01"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"TSLA","range":{"from":"2021-10-01","to":"2022-10-01"}}}]}

@@ -51,7 +51,7 @@ document.getElementById('submit').addEventListener('click', function() {
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('response').innerHTML = `<p><strong>Summary:</strong> ${data.summary}</p>
-                    <p><strong>Score:</strong> ${data.score}</p>
+                    <p><strong>Score:</strong> ${data.score} out of 5</p>
                     <p><strong>Risks:</strong></p>
                     <ul>${data.risks.map(risk => `<li><strong>${risk.name}:</strong> ${risk.details}</li>`).join('')}</ul>`;
                     document.getElementById('response').classList.add('show');
