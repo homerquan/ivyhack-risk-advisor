@@ -4,6 +4,7 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
 import { riseWithFade, staggerChildren, videoAnimation, wordAnimation } from "../utils/animations";
+import { Button } from "@/components/ui/button";
 //import './video2.mp4'
 
 const Home: NextPage = () => {
@@ -18,8 +19,8 @@ const Home: NextPage = () => {
       <h1 className="text-8xl font-bold w-[40rem] leading-[90%] tracking-[-2px] self-end">
         <AnimatedWords title="An innovative AI stock advisor" />
         </h1>
-      {/* <motion.div className="text-base leading-[150%]" variants={riseWithFade}>
-        Unlock the power of artificial intelligence to make informed investment decisions. With Second Insight, you can access real-time market data, receive personalized investment recommendations, track your portfolio performance, and extend your knowledge to stay ahead of the market trends. Start your journey to financial success today!
+      {/* <motion.div className="text-5xl w-6 leading-[150%]" variants={riseWithFade}>
+        <Button>Lets go!</Button>
         </motion.div> */}
     </main>
     <motion.video loop={true} autoPlay={true} muted={true} playsInline={true} variants={videoAnimation}>
