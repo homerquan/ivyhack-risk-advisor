@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Investment Advisor</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <label for="goal">Goal</label>
+      <textarea id="goal" placeholder="Enter your investment goal"></textarea>
+      <div id="context-container">
+        <button id="context-btn">Add Context</button>
+        <label for="context" class="context-label" style="display: none"
+          >Context</label
+        >
+        <textarea
+          id="context"
+          placeholder="Context information"
+          style="display: none"
+        ></textarea>
+        <label for="timestamp" class="context-label" style="display: none"
+          >Timestamp</label
+        >
+        <input type="date" id="timestamp" style="display: none" />
+      </div>
+      <label for="time">Time</label>
+      <input type="date" id="time" />
+      <button id="submit">Submit</button>
+      <div id="response"></div>
+      <div id="loading-status" style="display: none"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,8 +1,10 @@
 const express = require('express');
 const { exec } = require('child_process');
 const fs = require('fs-extra');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Function to run a command and wait for its completion
