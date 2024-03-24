@@ -24,7 +24,7 @@ if (options.file) {
   run();
 }
 
-async function performRiskAnalysis(data, model = "gpt3.5") {
+async function performRiskAnalysis(data, model = "gpt4") {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY, // This is the default and can be omitted
   });
@@ -48,7 +48,7 @@ ${data}
 
 ===
 {
-  "summary": "Based on Boeing's performance as of 2022/01/01, the investment presents a moderate opportunity with specific risks to monitor. The company's recovery trajectory in the post-pandemic era indicates potential growth, especially in defense and space sectors. However, competition and regulatory scrutiny remain concerns.",
+  "summary": "Based on Boeing's annual report and stock market performance as of 2022/01/01, %more summary from report and stock history%",
  "score": 3,
   "risks": [
     {
