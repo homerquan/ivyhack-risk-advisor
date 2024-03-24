@@ -57,17 +57,17 @@ export default function ChatInput(
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-xl bg-white p-4 shadow-xl space-y-4"
+      className=" bg-white h-[20%] relative z-10 shadow-xl space-y-4 border-r"
     >
       {imageUrl && (
         <UploadImagePreview url={imageUrl} onRemove={onRemovePreviewImage} />
       )}
-      <div className="flex w-full items-start justify-between gap-4 ">
+      <div className="flex w-full items-start justify-between gap-4 p-4">
         <Input
           autoFocus
           name="message"
           placeholder="Type a message"
-          className="flex-1"
+          className="flex-1 h-14"
           value={props.input}
           onChange={props.handleInputChange}
         />
@@ -75,7 +75,7 @@ export default function ChatInput(
           onFileUpload={handleUploadFile}
           onFileError={props.onFileError}
         />
-        <Button type="submit" disabled={props.isLoading}>
+        <Button type="submit" className="h-14" disabled={props.isLoading}>
           Send message
         </Button>
       </div>

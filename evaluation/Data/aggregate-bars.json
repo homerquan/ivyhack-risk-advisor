@@ -1,8 +1,8 @@
 {
-    "ticker": "AAPL",
-    "queryCount": 0,
-    "resultsCount": 0,
-    "adjusted": true,
-    "status": "DELAYED",
-    "request_id": "90ca3cd651f01a1c329756c0f58d5dc3"
+  "ticker": "AAPL",
+  "queryCount": 0,
+  "resultsCount": 0,
+  "adjusted": true,
+  "status": "DELAYED",
+  "request_id": "90ca3cd651f01a1c329756c0f58d5dc3"
 }
