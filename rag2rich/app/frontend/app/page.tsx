@@ -11,13 +11,13 @@ export default function Home() {
         <div className="flex flex-col mt-8 gap-2">
         <div className="w-full flex items-center h-12 bg-black rounded-3xl">
             <p className="text-white p-4 flex items-center text-md truncate">Risk management</p>
-          </div>
-          <div className="w-full h-12 bg-white rounded-3xl">
+        </div>
+        <div className="w-full flex items-center h-12 bg-white rounded-3xl">
             <p className="text-black p-4 flex items-center text-md truncate">Past assessment</p>
-          </div>
-          <div className="w-full h-12 bg-white rounded-3xl">
+        </div>
+        <div className="w-full flex items-center h-12 bg-white rounded-3xl">
             <p className="text-black p-4 flex items-center text-md truncate">Portfolio pred</p>
-          </div>
+        </div>
         </div>
       </div>
       <ChatSection />

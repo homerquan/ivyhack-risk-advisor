@@ -8,6 +8,7 @@ import { ChatHandler } from "./chat.interface";
 export default function ChatMessages(
   props: Pick<ChatHandler, "messages" | "isLoading" | "reload" | "stop">,
 ) {
+
   const scrollableChatContainerRef = useRef<HTMLDivElement>(null);
   const messageLength = props.messages.length;
   const lastMessage = props.messages[messageLength - 1];
@@ -58,11 +59,12 @@ export default function ChatMessages(
           showStop={showStop}
         />
       </div>
-      <div className="w-full gap-4  flex-wrap h-[10rem]  mb-[10rem] shrink-0 rounded-xl flex flex-row justify-center items-center">
+      {props.messages.length == 0  && (
+        <div className="w-full gap-4  flex-wrap h-[10rem]  mb-[10rem] shrink-0 rounded-xl flex flex-row justify-center items-center">
         <div className="flex flex-row w-full mb-[2rem] flex-wrap gap-4">
-        <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
-          <h2 className="font-bold !text-black 0 -mb-1">What is my risk</h2>
-          <p className="text-gray-700">if I invest in boeing in 2024?</p>
+        <div className="w-[48.5%]  transition h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
+          <h2 className="font-bold text-black 0 -mb-1">What is my risk</h2>
+          <p className="text-gray-700">if I invest $1000 in Berkshire in 2024?</p>
         </div>
         <div className="w-[48.5%] h-20 rounded-lg flex flex-col cursor-pointer justify-center px-4 truncate bg-white border relative z-10">
           <h2 className="font-bold !text-black 0 -mb-1">Give me a visualization</h2>
@@ -79,6 +81,8 @@ export default function ChatMessages(
         </div>
         </div>
       </div>
+      )}
+      
 </div>
   );
 }
