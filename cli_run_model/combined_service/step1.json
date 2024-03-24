@@ -1,1 +1,1 @@
-{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"INTC","range":{"from":"2021-10-01","to":"2022-10-01"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"INTC","range":{"from":"2021-10-01","to":"2022-10-01"}}}]}
+{"actions":[{"action":"LOOK_REPORT","data":{"symbol":"BA","range":{"from":"2023-03-14","to":"2023-09-14"}}},{"action":"LOOK_STOCK_PRICE","data":{"symbol":"BA","range":{"from":"2023-03-14","to":"2023-09-14"}}}]}

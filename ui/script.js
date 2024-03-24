@@ -12,7 +12,6 @@ document.getElementById('submit').addEventListener('click', function() {
     var goal = document.getElementById('goal');
     var context = document.getElementById('context');
     var timestamp = document.getElementById('timestamp');
-    var time = document.getElementById('time');
     var submitBtn = document.getElementById('submit');
     var loadingStatus = document.getElementById('loading-status');
 
@@ -22,7 +21,7 @@ document.getElementById('submit').addEventListener('click', function() {
     }
 
     // Disable inputs and show loading
-    [goal, context, timestamp, time, submitBtn].forEach(elem => elem.disabled = true);
+    [goal, context, timestamp, submitBtn].forEach(elem => elem.disabled = true);
     loadingStatus.style.display = 'block';
     loadingStatus.innerHTML = '<p>Checking stock history...</p>';
 
