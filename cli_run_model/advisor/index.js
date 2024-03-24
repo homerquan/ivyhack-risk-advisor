@@ -38,9 +38,9 @@ async function performRiskAnalysis(data, model = "gpt4") {
 
   let prompt = `
 assume an investor want to do this: ${goal} (right now means 2022/1/1), and claim with this context: ${context} 
-based on following annual report and stock price history, 
+based on following JSON data about annual report and stock price history
   
-===
+=== report and stock price history ====
 
 ${data}
 
@@ -50,28 +50,28 @@ ${data}
 
 ===
 {
-  "summary": "Based on Boeing's annual report and stock market performance as of 2022/01/01, %more summary from report and stock history%",
+  "summary": "Based on Boeing's annual report and stock market performance as of 2022/01/01, %more summary from JSON data about annual report and stock price history%",
  "score": 3,
   "risks": [
     {
       "name": "Market Competition",
       "details": "Boeing faces intense competition from Airbus in the commercial aviation sector. Any significant advancements or sales victories by Airbus could negatively impact Boeing's market share and stock price.",
-      "evidence": "The annual report see 10% decline in market share"
+      "evidence": "%explain why this is a risk based on JSON data about annual report and stock price history%"
     },
     {
       "name": "Regulatory Risks",
       "details": "Boeing is still navigating the aftermath of the 737 MAX incidents, with ongoing regulatory scrutiny that could affect its operational freedom and impose additional costs.",
-      "evidence": "%explain why this is a risk%"
+      "evidence": "%explain why this is a risk based on JSON data about annual report and stock price history%"
     },
     {
 "      name": "Supply Chain Disruptions",
       "details": "Global supply chain issues, partly due to the pandemic, could delay Boeing's production schedules and deliveries, impacting revenue forecasts.",
-      "evidence": "%explain why this is a risk%"
+      "evidence": "%explain why this is a risk based on JSON data about annual report and stock price history%"
     },
     {
       "name": "Geopolitical Tensions",
       "details": "Escalating geopolitical tensions, especially involving key markets or suppliers, could disrupt Boeing's operations or alter the defense spending patterns of governments, affecting both commercial and defense sectors.",
-      "evidence": "%explain why this is a risk%"
+      "evidence": "%explain why this is a risk based on JSON data about annual report and stock price history%"
     }
   ],
   "bi": {}
