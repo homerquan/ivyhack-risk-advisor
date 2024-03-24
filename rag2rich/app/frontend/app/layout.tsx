@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
             
-            <main className="flex min-h-screen flex-col items-center gap-10  background-gradient">
+            <main className="flex flex-col  background-gradient overflow-hidden h-screen">
             <Header />
               {children}
               
