@@ -51,7 +51,7 @@ export default function ChatMessages(
           </div>
         )}
       </div>
-      <div className="flex justify-end py-4">
+      <div className="flex relative z-10 justify-end py-4">
         <ChatActions
           reload={props.reload}
           stop={props.stop}
