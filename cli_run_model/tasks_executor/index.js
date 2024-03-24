@@ -2,6 +2,7 @@
 
 const { program } = require("commander");
 const moment = require("moment");
+const fs = require('fs');
 const process = require("process");
 const yahooFinance = require("yahoo-finance");
 const axios = require('axios');
@@ -10,22 +11,19 @@ const FMP_API_KEY = "f28c1df74c02fc9d574b79900a2d9147";
 
 program
   .description("CLI tool to execute tasks and generate output")
-  .requiredOption(
-    "-i, --input <string>",
-    "Input JSON string with a list of tasks"
-  );
+  .requiredOption('-f, --file <string>', 'Input JSON file name');
 
 program.parse(process.argv);
 
 const options = program.opts();
 
 const runAsync = async(tasks) => {
-  const results = await executeTasks(tasks);
+  const results = await executeTasks(tasks.actions);
   console.log(JSON.stringify(results));
 }
 
-if (options.input) {
-  const tasks = JSON.parse(options.input);
+if (options.file) {
+  const tasks = JSON.parse(fs.readFileSync(options.file, 'utf8'));
   runAsync(tasks);
 }
 

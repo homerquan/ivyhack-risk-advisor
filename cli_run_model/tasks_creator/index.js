@@ -15,6 +15,7 @@ const options = program.opts();
 const run = async()=>{
   const input = JSON.parse(options.input);
   const tasks = await generateTasks(input);
+  console.log(JSON.stringify(tasks));
 }
 
 if (options.input) {
@@ -92,8 +93,6 @@ async function generateTasks(input, model = "gpt3.5") {
 
   try {
     tasks = JSON.parse(output);
-    // Example of handling tasks based on the API output
-    console.log(output);
   } catch (e) {
     console.error("Error parsing tasks:", e);
   }
