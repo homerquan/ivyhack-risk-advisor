@@ -38,8 +38,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
             
-            <main className="flex flex-col  background-gradient overflow-hidden h-screen">
-            <Header />
+            <main className="flex flex-col  background-gradient">
+            
               {children}
               
             </main>

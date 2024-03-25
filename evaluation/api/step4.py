@@ -20,7 +20,7 @@ generated_text = response.choices[0].message.content
 print("generated text")
 print(generated_text)  # the model seems to correctly output the appropriate json format --> manually save it into the 
 
-extracted_info_file_path="/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/extracted_info2.txt"  # ensure that the file path is correct
+extracted_info_file_path="/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/extracted_info2.txt"  # ensure that the file path is correct
 with open(extracted_info_file_path, 'w') as file:
     file.write(generated_text)
 print(f"Output saved to {extracted_info_file_path}")

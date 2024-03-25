@@ -112,7 +112,7 @@ result = {
 }
 
 # Specify the correct path for your environment
-json_file_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/bitMoreAdvanced-response.json'  #corrected file pathing after migration
+json_file_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/bitMoreAdvanced-response.json'  #corrected file pathing after migration
 
 with open(json_file_path, 'w') as json_file:
     json.dump(result, json_file, indent=4)

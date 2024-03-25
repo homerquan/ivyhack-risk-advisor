@@ -6,9 +6,9 @@ import pandas as pd
 
 from test3 import get_historical_data
 
-stock_info_file = pd.read_csv('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/stock_ticker.csv')
+stock_info_file = pd.read_csv('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/stock_ticker.csv')
 
-stock_info = "/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/stock_ticker.csv"
+stock_info = "/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/stock_ticker.csv"
 # Read the stock_info.csv file
 with open(stock_info, 'r') as file:
     csv_reader = csv.reader(file)
@@ -82,7 +82,7 @@ extracted_info = {
 
 
 # Save the extracted information to a separate JSON file
-extracted_info_file = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/extracted_info.txt'
+extracted_info_file = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/extracted_info.txt'
 #end of hardcoded value, start of dynamic logic
 
     #json.dump(extracted_info, file)
@@ -107,7 +107,7 @@ if stock_ticker is None:
     print("generated text")
     print(generated_text)  # the model seems to correctly output the appropriate json format --> manually save it into the 
 
-    extracted_info_file_path="/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/Data/extracted_info1.txt"  # ensure that the file path is correct
+    extracted_info_file_path="/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/Data/extracted_info1.txt"  # ensure that the file path is correct
     with open(extracted_info_file_path, 'w') as file:
         file.write(generated_text)
 
@@ -138,7 +138,7 @@ if stock_ticker is None:
         }
 
         # Save the extracted information to a separate JSON file
-        extracted_info_file = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/LLMSResponse/extracted_info.json'
+        extracted_info_file = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/LLMSResponse/extracted_info.json'
         with open(extracted_info_file, 'w') as file:
             json.dump(extracted_info, file)
             '''

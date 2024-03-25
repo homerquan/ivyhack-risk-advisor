@@ -77,9 +77,9 @@ response_to_save = {
 result = {'response': generated_text, 'matrix': matrix, 'user_request': response_to_save}
 
 # Save the result in a JSON file
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/output.json', 'w') as json_file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/output.json', 'w') as json_file:
     json.dump(result, json_file, indent=4)
 
 # Save the response in a text file
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/output.txt', 'w') as text_file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/output.txt', 'w') as text_file:
     text_file.write(generated_text)
