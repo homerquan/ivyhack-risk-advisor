@@ -12,45 +12,46 @@ def read_json_file(file_path):
         return json.load(file)
     
 # import the json files relevant to the api call to access their content
-aggregate_bars_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/aggregate-bars.json'
+    
+aggregate_bars_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/aggregate-bars.json'
 
-grouped_daily_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/grouped-daily.json'
+grouped_daily_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/grouped-daily.json'
 
-openClose_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/open-close.json'
+openClose_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/open-close.json'
 
-previousClose_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/previous-close.json'
+previousClose_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/previous-close.json'
 
-simpleMovingAverage_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/sma.json'
+simpleMovingAverage_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/sma.json'
 
-exponentialMovingAverage_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/ema.json'
+exponentialMovingAverage_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/ema.json'
 
-movingAverageConvergenceDivergence_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/macd.json'
+movingAverageConvergenceDivergence_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/macd.json'
 
-relativeStrengthIndex_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/rsi.json'
+relativeStrengthIndex_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/rsi.json'
 
-tickerSymbols_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/tickers.json'
+tickerSymbols_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/tickers.json'
 
-tickerDetails_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/ticker-details.json'
+tickerDetails_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/ticker-details.json'
 
-allNews_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/Allnews.json'
+allNews_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/Allnews.json'
 
-specificStockNews_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/SpecificStockNews.json'
+specificStockNews_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/SpecificStockNews.json'
 
-marketHolidays_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/MarketHolidays.json'
+marketHolidays_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/MarketHolidays.json'
 
-marketStatus_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/MarketStatus.json'
+marketStatus_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/MarketStatus.json'
 
-stockSplitList_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/SplitList.json'
+stockSplitList_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/SplitList.json'
 
-stockSplitSpecific_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/StockSplitSpecific.json'
+stockSplitSpecific_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/StockSplitSpecific.json'
 
-dividendList_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/DividendList.json'
+dividendList_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/DividendList.json'
 
-stockDividendSpecific_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/StockDividendSpecific.json'
+stockDividendSpecific_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/StockDividendSpecific.json'
 
-stockConditions_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/StockConditions.json'
+stockConditions_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/StockConditions.json'
 
-stockExchanges_path = '/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/StockExchanges.json'
+stockExchanges_path = '/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/StockExchanges.json'
 
 #read the json files
 aggregate_bars = read_json_file(aggregate_bars_path)

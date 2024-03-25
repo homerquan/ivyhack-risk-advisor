@@ -19,7 +19,7 @@ export default function Home() {
       </motion.div>
     )}
     {!imagesLoading && (
-      <><Header /><div className="flex flex-row h-[100vh]">
+      <><Header /><div className="flex flex-row h-[100vh] overflow-hidden">
           <div className="pt-12 pr-4 pl-4  w-[18%] border-r shrink-0 bg-gradient-to-b from-background/90 via-background/50 to-background/10 backdrop-blur-xl">
 
             <h1 className="text-4xl font-bold">Chats</h1>

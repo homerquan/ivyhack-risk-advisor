@@ -34,7 +34,7 @@ print(api_test4_content)  # check if content is correctly loaded
 #make api call based on the extracted_info.txt file content:
 
 # Load the content of the file
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/extracted_info.txt') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/extracted_info.txt') as file:
     content = file.read()
 
 # Remove triple backticks if present

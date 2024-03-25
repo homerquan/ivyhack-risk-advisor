@@ -15,7 +15,7 @@ url = f"https://api.polygon.io/v2/aggs/ticker/{stock_ticker}/range/1/day/{start_
 response = requests.get(url)
 print("\nAggregate-Bars Response:")
 print(response.content)
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/aggregate-bars.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/aggregate-bars.json', 'w') as file:
     json.dump(json.loads(response.content), file, indent=4)
 
 
@@ -24,7 +24,7 @@ url2 = f"https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/{start_d
 print("\nGrouped-Daily Response:")
 response2 = requests.get(url2)
 print(response2.content)
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/grouped-daily.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/grouped-daily.json', 'w') as file:
     json.dump(json.loads(response2.content), file, indent=4)
 '''
 #get the open,close and afterhours prices of a stock symbol on a certain date
@@ -32,19 +32,19 @@ url3 = f"https://api.polygon.io/v1/open-close/{stock_ticker}/{start_date}?adjust
 print("\nOpen-Close Response:")
 response3 = requests.get(url3)
 print(response3.content)
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/open-close.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/open-close.json', 'w') as file:
     json.dump(json.loads(response3.content), file, indent=4)
 
 url4 = f"https://api.polygon.io/v2/aggs/ticker/{stock_ticker}/prev?adjusted=true&apiKey=kpfx5ixgOD4mMMy8cRrR_vYAJgWOKWk8"
 print("\nPrevious Close Response:")
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/previous-close.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/previous-close.json', 'w') as file:
     response4 = requests.get(url4)
     print(response4.content)
 '''
 #get trades for a ticker symbol in a given time range
 url5 = f"https://api.polygon.io/v3/trades/{stock_ticker}?{start_date}&apiKey=kpfx5ixgOD4mMMy8cRrR_vYAJgWOKWk8"
 print("\nTrades Response:")
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/Data/trades.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/Data/trades.json', 'w') as file:
     response5 = requests.get(url5)
     print(response5.content)
 
@@ -54,6 +54,6 @@ with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/D
 
     #the file saves the data twice
 '''
-with open('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/data/aggregate-bars.json', 'w') as file:
+with open('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/data/aggregate-bars.json', 'w') as file:
     file.write(response.content.decode('utf-8'))
 '''

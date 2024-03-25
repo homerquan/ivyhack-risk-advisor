@@ -1,6 +1,6 @@
 # adding this ensures we can import files from other directories as well
 import sys
-sys.path.append('/Users/ayandas/Desktop/VS_Code_Projects/ivyhacks-backend/evaluation/api')  
+sys.path.append('/Users/goofyahhgarv/Desktop/Projects/ivyhack-risk-advisor/evaluation/api')  
 import api_calls
 
 api_calls.exponentialMovingAverage() # test 6

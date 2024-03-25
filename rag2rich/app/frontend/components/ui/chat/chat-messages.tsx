@@ -36,10 +36,10 @@ export default function ChatMessages(
   }, [messageLength, lastMessage]);
 
   return (
-<div className="w-full h-[80%] border-r shrink-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90 backdrop-blur-xl p-4 pb-0 relative">
+<div className="w-full h-[80%]  border-r shrink-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90 backdrop-blur-xl p-4 pb-0 relative">
   <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/50"></div>
       <div
-        className="flex h-[50vh] flex-col gap-5 divide-y overflow-y-auto pb-4"
+        className="flex h-[50vh] flex-col gap-5 relative z-10 divide-y overflow-y-auto pb-4"
         ref={scrollableChatContainerRef}
       >
         {props.messages.map((m) => (
