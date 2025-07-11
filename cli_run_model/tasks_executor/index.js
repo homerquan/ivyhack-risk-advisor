@@ -29,7 +29,7 @@ if (options.file) {
 
 async function executeTasks(tasks) {
   // Mock function to execute tasks and return results
-  let evidencs = {};
+  let evidence = {};
   let runningTasks = [];
   tasks.map(async (task) => {
     switch (task.action) {
@@ -40,20 +40,22 @@ async function executeTasks(tasks) {
           task.data.range.from,
           task.data.range.to
         ));
+        break;
       case "LOOK_STOCK_PRICE":
         runningTasks.push(getStockPrice(
           task.data.symbol,
           task.data.range.from,
           task.data.range.to
-        ));   
+        ));
+        break;
       default:
-        // do nothing; 
+        // do nothing;
     }
   });
 
-  evidencs = await Promise.all(runningTasks);
+  evidence = await Promise.all(runningTasks);
 
-  return {"report":evidencs[0],"stock":evidencs[1]};
+  return {"report": evidence[0], "stock": evidence[1]};
 }
 
 async function getStockPrice(symbol, from, to) {
